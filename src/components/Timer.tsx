@@ -8,9 +8,11 @@ interface TimerProps {
 }
 
 const Timer: React.FC<TimerProps> = ({ setCurrentStep }) => {
-  const [time, setTime] = useState(0);
-  const [unlockCode, setUnlockCode] = useState('');
 
+  const [time, setTime] = useState(0);
+  const [unlockValue, setunlockValue] = useState('');
+
+  const unlockCode = 'AABBCC';
 
   useEffect(() => {
     const calculateTimeUntilNextChristmas = () => {
@@ -52,12 +54,13 @@ const Timer: React.FC<TimerProps> = ({ setCurrentStep }) => {
   const seconds = Math.floor((time % (1000 * 60)) / 1000);
 
   // Function to ensure digit value is between 0 and 9
-  const checkNum = (num: number) => {
-    return Math.max(0, Math.min(9, num));
-  }
+  const checkNum = (num: number): 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 => {
+    return Math.max(0, Math.min(9, num)) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+  };
+  
 
   return (
-    <section className='bg-black text-white container mx-auto flex items-center justify-center min-h-screen relative -mt-10'>
+    <section className='bg-black text-white container mx-auto flex h-full items-center justify-center relative -mt-10'>
       <Head>
         <title>Please wait 🥺</title>
       </Head>
@@ -104,8 +107,8 @@ const Timer: React.FC<TimerProps> = ({ setCurrentStep }) => {
 
       <div className='absolute bottom-10'>
         <div className='flex items-center'>
-            <input value={unlockCode} onChange={e => setUnlockCode(e.target.value)} placeholder='Enter unlock code to skip the timer' className='outline-none px-2 py-1.5 rounded-sm bg-gray-800 w-72' />
-            <button type='button' onClick={() => {if (unlockCode === 'AABBCCDD') setCurrentStep(1)}} className='py-1.5 px-4 bg-pink-600 rounded outline-none hover:bg-pink-700 transition-all'>Unlock</button>
+            <input value={unlockValue} onChange={e => setunlockValue(e.target.value)} placeholder='Enter unlock code to skip the timer' className='outline-none px-2 py-1.5 rounded-sm bg-gray-800 w-72' />
+            <button type='button' disabled={unlockValue !== unlockCode} onClick={() => setCurrentStep(1)} className='py-1.5 px-4 bg-pink-600 rounded outline-none hover:bg-pink-700 disabled:bg-gray-400 transition-all'>Unlock</button>
         </div>
       </div>
     </section>

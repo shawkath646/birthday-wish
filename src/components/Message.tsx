@@ -13,7 +13,7 @@ const Message: React.FC<MessageProps> = ({ setCurrentStep }) => {
     const text3 = 'Remember, I am here for you, ready to lend a helping hand whenever you need it, no matter what.😇 Your happiness means the world to me, and Ill stand by your side through thick and thin, always. Sending my sincerest salaam to your elder sister, uncle, and aunt. Wishing them well and hoping they are also celebrating this special day with joy and love.❤️ Really missing you in this time.🥲';
 
     return (
-        <section className="bg-gradient-to-tr from-blue-300 to-blue-400 min-h-screen container mx-auto flex justify-center items-center">
+        <section className="bg-gradient-to-tr from-blue-300 to-blue-400 h-full container mx-auto flex justify-center items-center">
             <Head>
                 <title>Hey ! Listen 😒</title>
             </Head>
