@@ -4,15 +4,18 @@ import DigitalDigit from 'digital-digit'; // Import your DigitalDigit component
 
 
 interface TimerProps {
-    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+  soundEnabled: boolean;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Timer: React.FC<TimerProps> = ({ setCurrentStep }) => {
+const Timer: React.FC<TimerProps> = ({ soundEnabled, setCurrentStep }) => {
 
   const [time, setTime] = useState(0);
   const [unlockValue, setunlockValue] = useState('');
 
   const unlockCode = 'AABBCC';
+
+  
 
   useEffect(() => {
     const calculateTimeUntilNextChristmas = () => {
@@ -45,7 +48,50 @@ const Timer: React.FC<TimerProps> = ({ setCurrentStep }) => {
     return () => clearInterval(timer);
   }, []);
 
-
+  useEffect(() => {
+    let alarmAudio: HTMLAudioElement | null = null;
+    let tickingAudio: HTMLAudioElement | null = null;
+  
+    if (soundEnabled) {
+      if (time === 0) {
+        if (tickingAudio) {
+          (tickingAudio as HTMLAudioElement).pause();
+          (tickingAudio as HTMLAudioElement).currentTime = 0;
+        }
+        alarmAudio = new Audio('/assets/Alarm-Fast-High-Pitch-A1-www.fesliyanstudios.com.mp3');
+        alarmAudio.loop = true;
+        alarmAudio.play().catch(error => {
+          console.error('Alarm audio play error:', error);
+        });
+      } else {
+        if (alarmAudio) {
+          (alarmAudio as HTMLAudioElement).pause();
+          (alarmAudio as HTMLAudioElement).currentTime = 0;
+        }
+        tickingAudio = new Audio('/assets/Clock-Ticking-C-www.fesliyanstudios.com.mp3');
+        tickingAudio.loop = true;
+        tickingAudio.play().catch(error => {
+          console.error('Ticking audio play error:', error);
+        });
+      }
+    }
+  
+    return () => {
+      if (alarmAudio) {
+        (alarmAudio as HTMLAudioElement).pause();
+        (alarmAudio as HTMLAudioElement).currentTime = 0;
+      }
+      if (tickingAudio) {
+        (tickingAudio as HTMLAudioElement).pause();
+        (tickingAudio as HTMLAudioElement).currentTime = 0;
+      }
+    };
+  }, [soundEnabled, time]);
+  
+  
+  
+  
+  
 
   // Calculate days, hours, minutes, and seconds
   const days = Math.floor(time / (1000 * 60 * 60 * 24));

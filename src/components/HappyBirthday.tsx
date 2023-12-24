@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti'
-import useWindowSize from '@/app/lib/useWindowSize';
+import useWindowSize from '@/lib/useWindowSize';
 import Head from 'next/head';
 
 interface HappyBirthdayProps {
-    setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+  soundEnabled: boolean;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const HappyBirthday: React.FC<HappyBirthdayProps> = ({ setCurrentStep }) => {
+const HappyBirthday: React.FC<HappyBirthdayProps> = ({ soundEnabled, setCurrentStep }) => {
   const generateContent = (count: number, text: string): string[] => {
     return Array.from({ length: count }, () => `• ${text}`);
   };
@@ -21,6 +22,8 @@ const HappyBirthday: React.FC<HappyBirthdayProps> = ({ setCurrentStep }) => {
 
   const { height, width } = useWindowSize();
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const index1 = Math.floor(Math.random() * (content1.length - 20)) + 10;
@@ -32,6 +35,31 @@ const HappyBirthday: React.FC<HappyBirthdayProps> = ({ setCurrentStep }) => {
 
     return () => clearInterval(interval);
   }, [content1.length, content2.length, content3.length]);
+
+  useEffect(() => {
+    if (soundEnabled) {
+      const audio = new Audio('/assets/y2mate.is - HAPPY BIRTHDAY INSTRUMENTAL-57jZJ2QpKRg-192k-1703434765.mp3');
+      audio.loop = true;
+      audio.currentTime = 10; // Start from 10 seconds
+
+      audioRef.current = audio;
+      audio.play().catch(error => {
+        console.error('Audio play error:', error);
+      });
+    } else if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, [soundEnabled]);
+  
+  
 
   return (
     <section className='bg-black container mx-auto flex justify-center h-screen'>
