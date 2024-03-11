@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti'
-import useWindowSize from '@/lib/useWindowSize';
-import Head from 'next/head';
+import useWindowSize from '@/utils/useWindowSize';
 
 interface HappyBirthdayProps {
   soundEnabled: boolean;
@@ -10,12 +9,15 @@ interface HappyBirthdayProps {
 }
 
 const HappyBirthday: React.FC<HappyBirthdayProps> = ({ soundEnabled, setCurrentStep }) => {
+
+  const personName = process.env.NEXT_PUBLIC_PERSON_NAME as string;
+
   const generateContent = (count: number, text: string): string[] => {
     return Array.from({ length: count }, () => `• ${text}`);
   };
 
   const content1 = generateContent(60, 'HAPPY BIRTHDAY');
-  const content2 = generateContent(60, 'SANJIDA JAHAN MRIDULA');
+  const content2 = generateContent(60, personName.toLocaleUpperCase());
   const content3 = generateContent(60, 'MANY MANY RETURNS OF THE DAY');
 
   const [indexes, setIndexes] = useState<number[]>([0, 0, 0]);
@@ -29,7 +31,7 @@ const HappyBirthday: React.FC<HappyBirthdayProps> = ({ soundEnabled, setCurrentS
       const index1 = Math.floor(Math.random() * (content1.length - 20)) + 10;
       const index2 = Math.floor(Math.random() * (content2.length - 20)) + 10;
       const index3 = Math.floor(Math.random() * (content3.length - 20)) + 10;
-      
+
       setIndexes([index1, index2, index3]);
     }, 1000);
 
@@ -38,9 +40,9 @@ const HappyBirthday: React.FC<HappyBirthdayProps> = ({ soundEnabled, setCurrentS
 
   useEffect(() => {
     if (soundEnabled) {
-      const audio = new Audio('/assets/y2mate.is - HAPPY BIRTHDAY INSTRUMENTAL-57jZJ2QpKRg-192k-1703434765.mp3');
+      const audio = new Audio('/y2mate.is - HAPPY BIRTHDAY INSTRUMENTAL-57jZJ2QpKRg-192k-1703434765.mp3');
       audio.loop = true;
-      audio.currentTime = 10; // Start from 10 seconds
+      audio.currentTime = 10;
 
       audioRef.current = audio;
       audio.play().catch(error => {
@@ -58,14 +60,11 @@ const HappyBirthday: React.FC<HappyBirthdayProps> = ({ soundEnabled, setCurrentS
       }
     };
   }, [soundEnabled]);
-  
-  
+
+
 
   return (
     <section className='bg-black container mx-auto flex justify-center h-screen'>
-      <Head>
-        <title>Happy Birthday Mridula 😍</title>
-      </Head>
       <div className='flex overflow-hidden'>
         <div>
           {content1.map((text, index) => (

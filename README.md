@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Birthday Wish
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img src="https://github.com/shawkath646/birthday-wish/blob/main/src/app/opengraph-image.png?raw=true" alt="Project Thumbnail" height="300">
+  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Project Type: Web Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Description:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Designed with love, this website allows you to send heartfelt wishes to your favorite people seamlessly and from anywhere. Packed with a plethora of animations, the site is not just visually stunning but also well-organized and responsive across all devices. Celebrate special moments with us, bringing joy to loved ones no matter where they are.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Project Duration: December 2023 - January 2024
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Purpose:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Sometimes, the birthday of a beloved individual arrives, and it is important to extend a heartfelt wish from afar. As a web developer, given the physical distance of a thousand miles between us, I have chosen to convey my wishes remotely. Therefore, I have created this application, adorned with captivating concepts and animations, to express my heartfelt birthday wishes to her.
+  
+### Technology Used:
 
-## Deploy on Vercel
+- [NextJS 14](https://nextjs.org/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Typescript](https://www.typescriptlang.org/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- [TailwindCSS](https://tailwindcss.com/)
+  
+
+### Project Insights:
+
+1. Introducing a fresh approach to birthday wishes online.
+
+2. Enhancing user experience with soothing animations.
+
+3. Ensuring seamless usability across smartphones, tablets, and desktops.
+
+4. Implementing automatic redirects and precise animation control for a streamlined user journey.
+
+
+### Live Link: [SH Authentication System](https://birthday-wish-eight.vercel.app/)
+  
+
+### Author:
+
+-  **Shawkat Hossain Maruf**
+
+- [Portfolio](https://sh-portfolio-maker.vercel.app/p/shawkath646)
+
+- Email: shawkath646@gmail.com
+
+- Occupation: Student
+
+  
+
+<img  src="https://storage.googleapis.com/sh-cloudburst-labs.appspot.com/cloudburst_lab_logo_transparent.png?GoogleAccessId=firebase-adminsdk-lf84z%40sh-cloudburst-labs.iam.gserviceaccount.com&Expires=4863727974&Signature=B1G9adLuRnjVIxGHoh3dyMVtGsR00KdmatEJRzKpMHPDjgsUX%2Bi9VftAz71puzbFmFsC5xP%2FHZFcBKQ7NBfJbkQzhiuywJMBmOSJlsn7mNfLgZlEsU5ReaNaMXDF6y3W65YeR76u2XBiQjAvVNl%2FEIvMvgbanNJWoDULrxF1OgeF1q8O270oT05ZfzIytLpi7c%2BbBIv6OtmzeUHNa0KJaTX0QPcdesQKFL0pQpaQPncdk6iQtOCOUafgKfQregHwn9iOo1iW1SM4sLw92uJURvLWimyq8JUWjc8J8AXyActsuwQs9IRQz5%2BUjc4k5zVwIS4fQDODvN8t97FDR2Sg7g%3D%3D"  alt="CloudBurst Logo"  height="150" width="150">
+
+*A product of [CloudBurst Lab](https://cloudburstlab.vercel.app)*
