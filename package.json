@@ -15,7 +15,7 @@
     "react": "^18",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
-    "shas-app-controller": "^1.2.0"
+    "shas-app-controller": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "^20",

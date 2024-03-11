@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion"
-import { getBrandData } from "../../../NPM Library/shas-app-controller/src/client";
+import { getBrandData } from "shas-app-controller/client";
 
 const GoodBye: React.FC<any> = () => {
 
