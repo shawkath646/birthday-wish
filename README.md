@@ -40,7 +40,7 @@ Sometimes, the birthday of a beloved individual arrives, and it is important to 
 4. Implementing automatic redirects and precise animation control for a streamlined user journey.
 
 
-### Live Link: [SH Authentication System](https://birthday-wish-eight.vercel.app/)
+### Live Link: [Birthday Wish](https://birthday-wish-eight.vercel.app/)
   
 
 ### Author:
