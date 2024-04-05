@@ -53,8 +53,6 @@ Sometimes, the birthday of a beloved individual arrives, and it is important to 
 
 - Occupation: Student
 
-  
-
-<img  src="https://storage.googleapis.com/sh-cloudburst-labs.appspot.com/cloudburst_lab_logo_transparent.png?GoogleAccessId=firebase-adminsdk-lf84z%40sh-cloudburst-labs.iam.gserviceaccount.com&Expires=4863727974&Signature=B1G9adLuRnjVIxGHoh3dyMVtGsR00KdmatEJRzKpMHPDjgsUX%2Bi9VftAz71puzbFmFsC5xP%2FHZFcBKQ7NBfJbkQzhiuywJMBmOSJlsn7mNfLgZlEsU5ReaNaMXDF6y3W65YeR76u2XBiQjAvVNl%2FEIvMvgbanNJWoDULrxF1OgeF1q8O270oT05ZfzIytLpi7c%2BbBIv6OtmzeUHNa0KJaTX0QPcdesQKFL0pQpaQPncdk6iQtOCOUafgKfQregHwn9iOo1iW1SM4sLw92uJURvLWimyq8JUWjc8J8AXyActsuwQs9IRQz5%2BUjc4k5zVwIS4fQDODvN8t97FDR2Sg7g%3D%3D"  alt="CloudBurst Logo"  height="150" width="150">
+<img  src="https://storage.googleapis.com/sh-cloudburst-labs.appspot.com/cloudburst_lab_logo_transparent.png?GoogleAccessId=firebase-adminsdk-lf84z%40sh-cloudburst-labs.iam.gserviceaccount.com&Expires=4863727974&Signature=B1G9adLuRnjVIxGHoh3dyMVtGsR00KdmatEJRzKpMHPDjgsUX%2Bi9VftAz71puzbFmFsC5xP%2FHZFcBKQ7NBfJbkQzhiuywJMBmOSJlsn7mNfLgZlEsU5ReaNaMXDF6y3W65YeR76u2XBiQjAvVNl%2FEIvMvgbanNJWoDULrxF1OgeF1q8O270oT05ZfzIytLpi7c%2BbBIv6OtmzeUHNa0KJaTX0QPcdesQKFL0pQpaQPncdk6iQtOCOUafgKfQregHwn9iOo1iW1SM4sLw92uJURvLWimyq8JUWjc8J8AXyActsuwQs9IRQz5%2BUjc4k5zVwIS4fQDODvN8t97FDR2Sg7g%3D%3D"  alt="CloudBurst Logo"  height="80" width="150">
 
 *A product of [CloudBurst Lab](https://cloudburstlab.vercel.app)*

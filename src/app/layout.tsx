@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   title: {
     default: "Happy Birthday",
-    template: "%s | SH Authentication System"
+    template: "%s | Happy Birthday"
   },
   description: "Designed with love, this website allows you to send heartfelt wishes to your favorite people seamlessly and from anywhere. Packed with a plethora of animations, the site is not just visually stunning but also well-organized and responsive across all devices. Celebrate special moments with us, bringing joy to loved ones no matter where they are.",
   category: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   publisher: "CloudBurst Lab",
   creator: "Shawkat Hossain Maruf",
   keywords: ["Next.js 14", "birthday wishes", "animated greetings", "well-organized", "remotely wish", "timer wish", "special occasions", "celebration", "heartfelt messages", "joyous moments", "virtual celebrations", "digital greetings", "responsive design", "animated birthday wishes", "seamless wishes", "remote celebrations", "best wishes", "personalized messages", "cloudburst lab"],
-  metadataBase: new URL('https://birthday-wish-eight.vercel.app/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_BASE_URL as string),
   openGraph: {
     images: '/opengraph-image.png',
   },
