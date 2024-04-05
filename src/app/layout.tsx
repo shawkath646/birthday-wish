@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import {  Poppins } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
 import SHAS from 'shas-app-controller'
 import './globals.css'
 
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang="en">
       <body className={inter.className}>
         <ContentWrapper>{children}</ContentWrapper>
+        <Analytics />
       </body>
     </html>
   )

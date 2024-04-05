@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import wishMessages from "@/JsonData/WishMessages.json";
 import birthdayCake from '@/assets/image_processing20200225-8988-1si51jv.gif'
 
-
-
 interface MessageProps {
     setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }
